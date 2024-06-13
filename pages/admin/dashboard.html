@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="../../styles/admin/style.css" rel="stylesheet">
+    <link href="../../styles/admin/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="grid-layout">
+      
+  <header class="navbar">
+    <nav>
+      <div>
+        <img src="../../img/logo.png" alt="logo" id="logo">
+      </div>
+      <div class="right-nav">
+        <span id="user-nav"><img src="../../img/user.png" alt="User"> Usuário</span> 
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="sidebar">
+      <div class="sidebar-items">
+      <ul>
+        <li><button type="" id="sidebar-active" onclick="openDash()"> <span> <img src="./icons/home/home-light.svg" alt=""> </span> <span>Dashboard</span></button></li>
+        <li><button type="" onClick="openInsc()"> <span><img src="./icons/group/group-light.svg" alt=""> </span> <span>Inscrições</span></button></li>
+        <li><button type="" onClick="openEdi()" disabled> <span> <img src="./icons/paper/paper-light.svg" alt="">  </span> <span>Editais</span></button></li>
+        <li><button type="" onClick="openProj()" disabled> <span> <img src="./icons/category/category-light.svg" alt="">  </span> <span>Projetos</span></button></li>
+      </ul>
+      </div>
+      <div class="logout">
+        <button type="button" id="btn-logout">Sair</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex-container">
+        <div class="top-inner-container">
+          <div class="e-top-container">
+            <h4>
+            Projetos efetivados: 82
+            </h4>
+          </div>
+          <div class="e-top-container">
+            <h4>
+            Orçamento previsto: R$100.000,00
+            </h4>
+          </div>
+          <div class="e-top-container">
+            <h4>
+            Gastos: R$60.000,00 (60%)
+            </h4>
+          </div>
+          </div>
+
+      <div class="mid-inner-container">
+        <div class="div-graphs">
+        <div class="graph">
+          <h2>Projetos concluidos anualmente</h2>
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="graph">
+          <h2>Orçamento anual</h2> 
+          <canvas id="myChart3"></canvas>
+        </div>
+
+        <div class="graph">
+          <h2>ODS</h2> 
+          <canvas id="myChart2"></canvas>
+        </div>
+
+        <div class="graph">
+          <h2>Tipos atingidos</h2> 
+          <canvas id="myChart4"></canvas>
+        </div>
+
+        <div class="graph">
+          <h2>Investimento mensal</h2> 
+          <canvas id="myChart5"></canvas>
+        </div>
+        
+        <div class="graph">
+          <h2>Classes</h2> 
+          <canvas id="myChart6"></canvas>
+        </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </main>
+
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../../scripts/admin/dashboard.js"></script>
+<script src="../../scripts/admin/script.js"></script>
+  </body>
+</html>

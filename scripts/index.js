@@ -7,25 +7,38 @@ const user = {
     senha: "dona123"
 }
 
-function validar(User_entry, Code_entry) {
-    User_entry = document.getElementById("email").value;
-    Code_entry = document.getElementById("senha").value;
- 
-    switch (true) {
-        case User_entry === adm.usuario && Code_entry === adm.senha:
-            window.location.replace("./paginas/fortes/dashboard.html");
+
+// ENTER LOGIN PAGE
+document.getElementById("btn-login").addEventListener("click", () => {
+    (window.href == "index.html") ? window.reload() : window.open("./index.html", "_self");
+});
+
+// LOGIN FUNCTION
+let login = document.getElementById("btn-submit");
+login.addEventListener("click", function() {
+    let user_entry = document.getElementById("email").value;
+    let pass_entry = document.getElementById("senha").value;
+    switch(true) {
+        case user_entry == adm.usuario && pass_entry == adm.senha:
+            window.open("./pages/admin/dashboard.html", "_self");
             break;
-        case User_entry === user.usuario && Code_entry === user.senha:
-            window.location.replace("./paginas/donatario/dashboard.html");
+        case user_entry == user.usuario && pass_entry == user.senha:
+            window.open("./pages/instituicao/dashboard.html", "_self");
             break;
-        case User_entry == "" || Code_entry == "":
-            alert("Ainda há opções para preencher");
+        case user_entry === "" || pass_entry === "":
+            alert("Preencha todos os campos!");
             break;
-        case User_entry != adm.usuario || Code_entry != adm.senha || 
-            User_entry != user.usuario || Code_entry != user.senha:
-            alert("Entrada incorreta");
-            window.location.reload();
+        default:
+            alert("Usuário ou senha inválidos!");
             break;
     }
-}
+});
 
+// TROCAR CONTEUDO DA PÁGINA
+link = document.querySelectorAll(".link");
+link.forEach((item) => {
+    item.addEventListener("click", () => {
+        let page = item.getAttribute("data-page");
+        window.open(page, "_self");
+    });
+});

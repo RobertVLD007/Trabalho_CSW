@@ -37,7 +37,7 @@ Seção 5 - Faq-main
   --link-small: 600 16px/120% 'Open Sans', sans-serif;
   --link-medium: 600 18px/120% 'Open Sans', sans-serif;
   --link-large: bolder 22px/120% 'Open Sans', sans-serif;
-  --link-border: 2px solid #000000; 
+  --link-border: 3px solid #000000; 
   
   /* BOX SHADOW */
   --shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -334,7 +334,12 @@ main#faq {
 <-------------->Fim - Seção 5 (Faq-main)<-------------->
 ||||||||||||||||||||||||||||||||||||||||||||||*/
 
-
+.enable {
+  display: block;
+}
+.disable {
+  display: none;
+}
 
 
 
