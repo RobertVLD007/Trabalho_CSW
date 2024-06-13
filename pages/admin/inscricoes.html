@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscriçoes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="../../styles/admin/style.css" rel="stylesheet">
+    <link href="../../styles/admin/inscricoes.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="grid-layout">
+      
+  <header class="navbar">
+    <nav>
+      <div>
+        <img src="../../img/logo.png" alt="logo" id="logo">
+      </div>
+      <div class="right-nav">
+        <span id="user-nav"><img src="../../img/user.png" alt="User"> Usuário</span> 
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="sidebar">
+      <div class="sidebar-items">
+      <ul>
+        <li><button type="" onclick="openDash()"> <span> <img src="./icons/home/home-light.svg" alt=""> </span> <span>Dashboard</span></button></li>
+        <li><button type="" id="sidebar-active" onClick="openInsc()"> <span><img src="./icons/group/group-light.svg" alt=""> </span> <span>Inscrições</span></button></li>
+        <li><button type="" onClick="openEdi()" disabled> <span> <img src="./icons/paper/paper-light.svg" alt="">  </span> <span>Editais</span></button></li>
+        <li><button type="" onClick="openProj()" disabled> <span> <img src="./icons/category/category-light.svg" alt="">  </span> <span>Projetos</span></button></li>
+      </ul>
+      </div>
+      <div class="logout">
+        <button type="button" id="btn-logout">Sair</button>
+      </div>
+    </div>
+    <div class="container-2">
+      <div class="flex-container">
+      <div class="mid-container">
+        <div class="mid-container-left">
+          <div class="left-item">
+            <button onClick="buttonActive(this.id)" class="default" id="element1">Pendentes(15)</button>
+            <button onClick="buttonActive(this.id)" class="default" id="element2"> Aprovados</button>
+            <button onClick="buttonActive(this.id)" class="default" id="element3">Recusados</button>
+          </div>
+          <div class="left-item">
+            <button onClick="buttonActive2(this.id)" class="default" id="element4">Editais</button>
+            <button onClick="buttonActive2(this.id)" class="default" id="element5">Cadastros</button>
+          </div>
+        </div>
+        <div class="mid-container-right">
+            <div class="conteudo-default" id="conteudo#1">
+              <nav>
+                <div class="search-div">
+                  <i class="icon">
+                    <img src="./icons/search/search-light.svg" alt=""> 
+                  </i>
+                  <input type="" name="" class="search-bar" placeholder="Pesquisar">
+                </div>
+              </nav>
+              <div class="conteudo-container">
+                
+                <div class="conteudo-container-left">
+
+                  <ul>
+                   <li> <button type="list-bt" onClick="openMail(this.id)" class="list-default" id="l1" value="1"> <span id="check-span"><input type="checkbox" onChange="listActive('l1')" id="l1-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" class="list-default" id="l2" value="2"> <span id="check-span"><input type="checkbox" onChange="listActive('l2')" id="l2-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" value="3" class="list-default" id="l3"> <span id="check-span"><input type="checkbox" onChange="listActive('l3')" id="l3-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" value="4" class="list-default" id="l4"> <span id="check-span"><input type="checkbox" onChange="listActive('l4')" id="l4-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" value="5" class="list-default" id="l5"> <span id="check-span"><input type="checkbox" onChange="listActive('l5')" id="l5-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" value="6" class="list-default" id="l6"> <span id="check-span"><input type="checkbox" onChange="listActive('l6')" id="l6-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" value="7" class="list-default" id="l7"> <span id="check-span"><input type="checkbox" onChange="listActive('l7')" id="l7-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                  </ul>
+
+                </div>
+                <div class="conteudo-container-right">
+
+                  <!-- =================== -->
+                  <div class="mail mail-default" id="mail#1"> 
+                    <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+                     <!-- =================== -->
+                  <div class="mail mail-default" id="mail#2"> 
+                     <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+                   <!-- =================== -->
+                  <div class="mail mail-default" id="mail#3"> 
+                    <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+
+                   <!-- =================== -->
+                  <div class="mail mail-default" id="mail#4"> 
+                     <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+
+                   <!-- =================== -->
+                  <div class="mail mail-default" id="mail#5"> 
+                     <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+
+                   <!-- =================== -->
+                  <div class="mail mail-default" id="mail#6"> 
+                     <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+
+                   <!-- =================== -->
+                  <div class="mail mail-default" id="mail#7"> 
+                     <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+
+                </div>
+
+              </div>
+            </div>
+
+<!-- ========================================================================================================== -->
+
+            <div class="conteudo-default" id="conteudo#2">
+   <nav>
+                <div class="search-div">
+                  <i class="icon">
+                    <img src="../icons/search/search-light.svg" alt=""> 
+                  </i>
+                  <input type="" name="" class="search-bar" placeholder="Pesquisar">
+                </div>
+              </nav>
+              <div class="conteudo-container">
+                
+                <div class="conteudo-container-left">
+
+                  <ul>
+                   <li> <button type="list-bt" onClick="openMail(this.id)" class="list-default" id="l1" value="1"> <span id="check-span"><input type="checkbox" onChange="listActive('l1')" id="l1-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" class="list-default" id="l2" value="2"> <span id="check-span"><input type="checkbox" onChange="listActive('l2')" id="l2-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" value="3" class="list-default" id="l3"> <span id="check-span"><input type="checkbox" onChange="listActive('l3')" id="l3-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" value="4" class="list-default" id="l4"> <span id="check-span"><input type="checkbox" onChange="listActive('l4')" id="l4-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" value="5" class="list-default" id="l5"> <span id="check-span"><input type="checkbox" onChange="listActive('l5')" id="l5-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" value="6" class="list-default" id="l6"> <span id="check-span"><input type="checkbox" onChange="listActive('l6')" id="l6-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                    <li> <button type="list-bt" onClick="openMail(this.id)" value="7" class="list-default" id="l7"> <span id="check-span"><input type="checkbox" onChange="listActive('l7')" id="l7-check"> </span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </span> <span>2023-11-24 15:42:18</span> </button> </li>
+
+                  </ul>
+
+                </div>
+                <div class="conteudo-container-right">
+
+                  <!-- =================== -->
+                  <div class="mail mail-default" id="mail#1"> 
+                    <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+                     <!-- =================== -->
+                  <div class="mail mail-default" id="mail#2"> 
+                     <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+                   <!-- =================== -->
+                  <div class="mail mail-default" id="mail#3"> 
+                    <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+
+                   <!-- =================== -->
+                  <div class="mail mail-default" id="mail#4"> 
+                     <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+
+                   <!-- =================== -->
+                  <div class="mail mail-default" id="mail#5"> 
+                     <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+
+                   <!-- =================== -->
+                  <div class="mail mail-default" id="mail#6"> 
+                     <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+
+                   <!-- =================== -->
+                  <div class="mail mail-default" id="mail#7"> 
+                     <main>
+                        <h1>Projeto Marte</h1>  
+                    <h2>Participando do Edital nº 23</h2>
+                    <p>CNPJ: 111.111.111-11</p>
+                    <p>CPF responsavel: 111.111.111-11</p>
+                    <p>ODS: Meio ambiente</p>
+                    <h3>Informações Adicionais</h3>
+                    <ul>
+                      <li>Data de início: 01/01/2024</li>
+                      <li>Local: São Paulo, SP</li>
+                      <li>Duração do projeto: 12 meses</li>
+                      <li>Investimento total: R$ 500.000,00</li>
+                      <li>Parceiros envolvidos: Empresa XYZ, ONG ABC</li>
+                      <li>Número de beneficiários: 200 pessoas</li>
+                      <li>Meta principal: Reduzir o desemprego local em 15%</li>
+                    </ul>
+                    </main>
+                  
+                    <nav>
+                      <button class="bt-secondary">Recusar</button>
+                      <button class="bt-primary">Aprovar</button>
+                    </nav>
+                  </div>
+                  <!-- =================== -->
+
+
+                </div>
+
+              </div>
+            </div>
+
+        </div>
+      </div>  
+      </div>
+  </div>
+    
+  </main>
+
+    </div>
+    
+<script src="../../scripts/admin/script.js"></script>
+<script src="../../scripts/admin/inscricoes.js"></script>
+  <button/ id="btn-logout"body>
+</html>

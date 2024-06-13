@@ -1,146 +1,346 @@
-* {
-  margin: 0;
-  padding: 0;
+/*############################################
+Seção 1 - Header/Navbar   (Header / Logo-container / Nav-section / Link-container / Profile-container)
+Seção 2 - Login-main      (Login-main / Form-section / Login-container / Btn-container / Projeto-container)
+Seção 3 - Campanhas-main 
+Seção 4 - Sobre-main 
+Seção 5 - Faq-main 
+##############################################*/
+
+/*############################################
+<-------------->Início - Variáveis<-------------->
+############################################*/
+
+:root {
+  /* MAIN COLORS */
+  --primary: #0085DB;
+  --secondary: #F8B400;
   
-  font-family: 'Open Sans';
+  /* STATUS */
+  --other: #558DFF;
+  --alert: #FFE16A;
+  --danger: #FF3333;
+  --disabled: #D8D8D8;
+  --confirmed: #00C247;
+  --informative: #004CE8;
+
+  /* TEXTS */
+  --font-color: #000000;
+
+  --head-1: 600 46px/120% 'Open Sans', sans-serif;
+  --head-2: 36px/120% 'Open Sans', sans-serif;
+  --head-3: 28px/120% 'Open Sans', sans-serif;
+  --head-4: 22px/120% 'Open Sans', sans-serif;
+  --head-5: 18px/120% 'Open Sans', sans-serif;
+  
+  --paragraph: lighter 32px/150% 'Open Sans', sans-serif;
+
+  --link-small: 600 16px/120% 'Open Sans', sans-serif;
+  --link-medium: 600 18px/120% 'Open Sans', sans-serif;
+  --link-large: bolder 22px/120% 'Open Sans', sans-serif;
+  --link-border: 3px solid #000000; 
+  
+  /* BOX SHADOW */
+  --shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  --shadow-light: 0 8px 16px 0 rgba(0,0,0,0.04);
+
+  /* BUTTONS */
+  /* --btn-padd: 32px 18px; */
+  --btn-height: 50px;
+  --btn-width: 170px; 
+
+  /* PRIMARY BUTTON */
+  --btn-pri-: #EEF6FF;
+  --btn-pri-hover: #0085DB;
+
+  /* SECONDARY BUTTON */
+  --btn-sec: #FDFCFC;
+  --btn-sec-hover: #EEF6FF;
+  --btn--sec-border: 2px solid #0074BE;
+  
+  --btn-sec-font: 600 18px/120% 'Open Sans', sans-serif;
+  --btn-sec-font-color: #0074BE;
+  
+  /* TERTIARY BUTTON */
+  --btn-ter: #0085DB;
+  --btn-ter-hover: #0074BE;
+  --btn-ter-font: 600 18px/120% 'Open Sans', sans-serif;
+  --btn-ter-font-color: #EEF6FF;
+  
+  /* CONTAINER */
+  --bg-gray: #F4F4F6;
+
+  /* INPUTS */
+  --input-width: 501px;
+  --input-height: 48px;
+  
+  --input-bgcolor: #FFFFFF;
+  --input-border: 2px solid #D6D6D6;
+  --input-border-hover: 2px solid #0085DB;
+  --input-border-focus: 3px solid #0085DB;
+ 
+  /* SIDEBAR */
+  --sidebar-bt-default: #5D7285;
+  --sidebar-bt-active: #0085DB;
+  --sidebar-bt-bg-active: #E9F5FE;
+  --bg-container: rgb(24, 197, 255, 3%);
 }
-html,body {
-  height: 100%;
-  box-sizing: border-box;
-}
-/*############################################
-UNIVERSAL
-############################################*/
+
+/*||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim - Variáveis<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
 
 
+
 /*############################################
-Caixas
+<-------------->Início - Seção 1 (Header/Navbar)<-------------->
 ############################################*/
+
 header {
-  border: 2px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+
+  gap: 5%;
 }
 
-/* main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2em;
-} */
+.logo-container {
+  width: 100px;
+  height: 0;
+  padding: 2em;
+
+  background-image: url("../img/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nav-section {
+  width: 45em;
+  height: auto;
+}
 
 .link-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+
+  gap: 5%;
+}
+
+.links {
+}
+.links > a {
+  font: var(--link-medium);
+  color: var(--font-color);
+
+  padding-bottom: 3px;
+
+  transition: .1s;
+}
+.links > a:hover {
+  border-bottom: var(--link-border);
+}
+
+.profile-container {
+}
+
+#btn-login {
+  margin: 2px;
+
+  width: var(--btn-width);
+  height: var(--btn-height);
+  background-color: var(--btn-sec);
+
+  border: var(--btn--sec-border);
+  border-radius: 8px;
+
+  font: var(--btn-sec-font);
+  color: var(--btn-sec-font-color);
+}
+
+#btn-login:hover {
+  cursor: pointer; 
+  background-color: var(--btn-sec-hover);
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim Seção 1 (Header/Navbar)<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+
+/*############################################
+<-------------->Início - Seção 2 (Login-main)<-------------->
+############################################*/
+
+main#login-main {
+  /* display: flex;
+  justify-content: space-around; */
+
+  margin-top: 10%;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 20em;
+
+  gap: 2%;
 }
 
 .login-section {
-  position: absolute;
-  margin: 0 5em;
-  top: 50%;
-  left: 20%;
-  transform: translate(-50%, -50%);
+  width: 50%;
 
-  width: 570px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 5%;
 }
 
-img#projeto-logo {
-  position: absolute;
-  top: 50%; 
-  left: 70%;
-  transform: translate(-50%, -50%);
+.login-section > h1 {
+  color: var(--font-color);
+  font: var(--head-1);
+}
+.login-section > p {
+  width: 100%;
+  margin-bottom: 3em;
+
+  font: var(--paragraph);
+}
+
+.form.section {
 
 }
 
-#email, #senha {
-  width: 90%;
-  height: 50px;
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+.login-container > label {
+  font: 16px/120% 'Open Sans', sans-serif;
+  color: var(--font-color);
+}
+.login-container > input {
+  width: var(--input-width);
+  height: var(--input-height);
   padding: 0 1em;
-  margin-bottom: 1em;
 
-  border: 1px solid #D6D6D6;
-  border-radius: 7px;
+  background-color: var(--input-bgcolor);
+  border: var(--input-border);
+  border-radius: 8px;
 
-  transition: .49s;
+  transition: .1s;
 }
-
-#email:hover, #senha:hover {
-  border: 1px solid #0085DB;
-  outline: 1px solid #0085DB;
+.login-container > input:hover {
+  border: var(--input-border-hover);
+}
+.login-container > input:focus {
+  border: var(--input-border-focus);
+  outline: none;
 }
 
 .btn-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 1em;
+  gap: 2em;
+
+  margin-top: 2em;
 }
 
 .btn-container > input {
-  color: white;
-  font-size: 17px;
-  font-weight: bold;
+  height: var(--btn-height);
+  width: var(--btn-width);
+  color: var(--btn-ter-font-color);
+  background-color: var(--btn-ter);
 
-  background-color: #0085DB;
-  width: 136px;
-  height: 50px;
-  border-radius: 10px;
+  font: var(--btn-ter-font);
+  border: none;
+  border-radius: 8px;
+
+  transition: .1s;
+}
+.btn-container > input:hover {
+  cursor: pointer;
+  background-color: var(--btn-ter-hover);
 }
 
-#sobre, #campanhas, #faq {
+.btn-links {
+  width: 30%;
+  
+  color: var(--primary);
+  font: var(--link-medium);
+  text-align: center;
+}
+
+.projeto-container {
+  width: 40em;
+  height: 30em;
+  margin-right: 10em;
+
+  mix-blend-mode: multiply;
+
+  background-image: url("../img/projeto.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/*||||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim - Seção 2 (Login-main)<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+
+/*############################################
+<-------------->Início - Seção 3 (Campanhas-main)<-------------->
+############################################*/
+
+main#campanhas {
   display: none;
 }
 
+/*||||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim - Seção 3 (Campanhas-main)<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+
 /*############################################
-Textos
+<-------------->Início - Seção 4 (Sobre-main)<-------------->
 ############################################*/
-h1 {
-  font-size: 46px;
-  line-height: 120%;
+
+main#sobre {
+  display: none;
 }
 
-a {
-  text-decoration: none;
+/*||||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim - Seção 4 (Sobre-main)<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+
+
+/*############################################
+<-------------->Início - Seção 5 (Faq-main)<-------------->
+############################################*/
+
+main#faq {
+  display: none;
 }
 
-.profile-container > a > button {
-  color: white;
-  font-size: 17px;
-  font-weight: bold;
-  text-align: center;
-  background-color: #0085DB;
-  width: 136px;
-  height: 50px;
-  border-radius: 10px;
+/*||||||||||||||||||||||||||||||||||||||||||||||
+<-------------->Fim - Seção 5 (Faq-main)<-------------->
+||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.enable {
+  display: block;
+}
+.disable {
+  display: none;
 }
 
-.link-container > a {
-  color: black;
-  font-size: 16px;
-  font-weight: 600;
-}
 
-.login-section > h1 {
-  font-size: 40px;
-  line-height: 120px;
-}
 
-.login-section > p {
-  font-size: 32px;
-  line-height: 120%;
-  letter-spacing: -1px;
 
-  margin-bottom: 1.3em;
-}
-
-.btn-container > a {
-  font-size: 18px;
-  font-weight: bold;
-}

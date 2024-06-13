@@ -1,0 +1,87 @@
+.conteudo-default{
+	display: none;
+}
+.conteudo-active{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 20px;
+}
+.conteudo-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+  height: 550px;
+
+}
+.conteudo-container-left{
+  overflow-y: scroll;
+  width: 100%;
+  position: relative;
+}
+.conteudo-container-left ul {
+	list-style: none;
+}
+.list-active {
+background-color: var(--sidebar-bt-bg-active);
+
+}
+.list-default {
+	width: 100%;
+	border: none;
+	display: grid;
+	gap: 2px;
+	grid-template-columns: 1fr 6fr 3fr;
+	padding: 4px 8px;
+	font-size: 1em;
+	color: hsl(0, 0%, 20%, 1.0);
+	cursor: pointer;
+
+}
+.conteudo-container-left ul li button span{
+	display: flex;
+	align-items: baseline;
+	justify-content: start;
+	line-clamp: 3;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+} 
+.conteudo-container-left ul li button span input {
+	width: 1.5em;
+	height: 1.5em;
+}
+#check-span {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+}
+.mail {
+display: flex;
+flex-direction: column;
+justify-content:space-between;
+height: 100%;
+	background-color: white;
+
+}
+.mail nav{
+display: flex;
+gap: 20px;
+justify-content: end;
+}
+
+.mail main ul {
+padding-left: 20px;
+}
+
+.mail-default {
+	display: none;
+}
+.mail-active {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.conteudo-container-right {
+}
