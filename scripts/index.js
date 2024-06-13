@@ -13,9 +13,13 @@ document.getElementById("btn-login").addEventListener("click", () => {
     (window.href == "index.html") ? window.reload() : window.open("./index.html", "_self");
 });
 
+// let form = document.querySelector("form-section");
+// form.getAttribute("action", "javascript:void(0)");
+
 // LOGIN FUNCTION
 let login = document.getElementById("btn-submit");
 login.addEventListener("click", function() {
+
     let user_entry = document.getElementById("email").value;
     let pass_entry = document.getElementById("senha").value;
     switch(true) {

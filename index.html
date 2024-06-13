@@ -52,13 +52,13 @@
         crie uma nova conta e batalharemos juntos para um mundo melhor.
       </p>
 
-      <form action="./pages/admin/dashboard.html" method="" class="form-section">
+      <form action="./php/index.php" method="POST" class="form-section">
         <div class="login-container">
           <label for="email">Digite seu e-mail</label>
-          <input type="text" id="email" placeholder="Email">
+          <input type="text" id="email" name="email"placeholder="Email">
 
           <label for="senha">Digite sua senha</label>
-          <input type="password" id="senha" placeholder="Senha">
+          <input type="password" id="senha" name="senha" placeholder="Senha">
         </div>
 
 
@@ -129,5 +129,4 @@
 
   <script src="scripts/index.js"></script>
 </body>
-
 </html>
