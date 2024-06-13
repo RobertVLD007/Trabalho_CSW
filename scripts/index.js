@@ -24,7 +24,7 @@ login.addEventListener("click", function() {
     let pass_entry = document.getElementById("senha").value;
     switch(true) {
         case user_entry == adm.usuario && pass_entry == adm.senha:
-            window.open("./pages/admin/dashboard.html", "_self");
+            window.open("./pages/admin/dashboard.html", "self");
             break;
         case user_entry == user.usuario && pass_entry == user.senha:
             window.open("./pages/instituicao/dashboard.html", "_self");
